@@ -1,1 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>JUMANA | Women's Suits</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 80px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      border-bottom: 1px solid rgba(212,175,103,.3);
+    }
+
+    .logo {
+      color: #d4af67;
+      font-family: Georgia, serif;
+      font-size: 30px;
+      letter-spacing: 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af67;
+    }
+
+    .contact-btn {
+      background: #d4af67;
+      color: #080808;
+      padding: 11px 20px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 70px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #242018 0%,
+          #0d0d0d 45%,
+          #050505 100%
+        );
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .mini-title {
+      color: #d4af67;
+      letter-spacing: 5px;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(55px, 12vw, 125px);
+      font-weight: normal;
+      letter-spacing: 10px;
+      color: #d4af67;
+    }
+
+    .line {
+      width: 70px;
+      height: 1px;
+      background: #d4af67;
+      margin: 25px auto;
+    }
+
+    .hero h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 5vw, 55px);
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #bbb;
+      line-height: 2;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .main-btn {
+      display: inline-block;
+      margin-top: 35px;
+      background: #d4af67;
+      color: #080808;
+      padding: 15px 35px;
+      font-weight: bold;
+    }
+
+    /* COLLECTION */
+
+    .collection {
+      background: #f3f0e9;
+      color: #111;
+      padding: 100px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title small {
+      color: #a17d38;
+      letter-spacing: 4px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(35px, 6vw, 60px);
+      font-weight: normal;
+      margin: 12px 0;
+    }
+
+    .section-title p {
+      color: #777;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background: #fff;
+      overflow: hidden;
+    }
+
+    /* صور تجريبية مصممة داخل الموقع */
+
+    .product-photo {
+      height: 450px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-black {
+      background:
+        linear-gradient(
+          135deg,
+          #050505,
+          #222,
+          #080808
+        );
+    }
+
+    .photo-gold {
+      background:
+        linear-gradient(
+          135deg,
+          #16120a,
+          #8f6d31,
+          #17130b
+        );
+    }
+
+    .photo-beige {
+      background:
+        linear-gradient(
+          135deg,
+          #ded4c2,
+          #766e62,
+          #27231e
+        );
+    }
+
+    .silhouette {
+      width: 190px;
+      height: 340px;
+      position: relative;
+      background: #111;
+      clip-path: polygon(
+        28% 0,
+        72% 0,
+        100% 27%,
+        77% 38%,
+        88% 100%,
+        12% 100%,
+        23% 38%,
+        0 27%
+      );
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+
+    .gold-suit {
+      background: #b08b45;
+    }
+
+    .beige-suit {
+      background: #ddd1bd;
+    }
+
+    .product-info {
+      padding: 22px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+    }
+
+    .product-info p {
+      color: #777;
+      font-size: 13px;
+      margin: 8px 0;
+    }
+
+    .price {
+      color: #a17d38;
+      font-weight: bold;
+    }
+
+    /* ABOUT */
+
+    .about {
+      padding: 110px 20px;
+      text-align: center;
+      background: #080808;
+    }
+
+    .about small {
+      color: #d4af67;
+      letter-spacing: 4px;
+    }
+
+    .about h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 7vw, 70px);
+      font-weight: normal;
+      margin: 20px 0;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
+      line-height: 2;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram {
+      background: #111;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .instagram h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      font-weight: normal;
+    }
+
+    .instagram p {
+      color: #999;
+      margin: 15px 0 25px;
+    }
+
+    .instagram-btn {
+      display: inline-block;
+      border: 1px solid #d4af67;
+      color: #d4af67;
+      padding: 13px 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 6%;
+      border-top: 1px solid rgba(212,175,103,.25);
+      display: flex;
+      justify-content: space-between;
+      color: #777;
+    }
+
+    footer strong {
+      color: #d4af67;
+      font-family: Georgia, serif;
+      letter-spacing: 3px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      header {
+        height: 70px;
+        padding: 0 20px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .contact-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        letter-spacing: 6px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-photo {
+        height: 500px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      JUMANA
+    </div>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#collection">المجموعة</a>
+      <a href="#about">عن JUMANA</a>
+    </nav>
+
+    <a class="contact-btn" href="#contact">
+      تواصلي معنا
+    </a>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="mini-title">
+        JUMANA • WOMEN'S SUITS
+      </div>
+
+      <h1>
+        JUMANA
+      </h1>
+
+      <div class="line"></div>
+
+      <h2>
+        Elegance in Every Detail
+      </h2>
+
+      <p>
+        بدلات نسائية راقية تجمع بين
+        القوة، الأناقة، والتفاصيل العصرية.
+      </p>
+
+      <a class="main-btn" href="#collection">
+        اكتشفي المجموعة
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLLECTION -->
+
+  <section class="collection" id="collection">
+
+    <div class="section-title">
+
+      <small>
+        THE COLLECTION
+      </small>
+
+      <h2>
+        JUMANA SUITS
+      </h2>
+
+      <p>
+        اختاري إطلالتكِ بثقة وأناقة
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <!-- PRODUCT 1 -->
+
+      <div class="product">
+
+        <div class="product-photo photo-black">
+
+          <div class="silhouette"></div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h3>
+            Black Signature
+          </h3>
+
+          <p>
+            بدلة سوداء بتصميم راقٍ
+          </p>
+
+          <div class="price">
+            299 ₪
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+
+      <div class="product">
+
+        <div class="product-photo photo-gold">
+
+          <div class="silhouette gold-suit"></div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h3>
+            Golden Classic
+          </h3>
+
+          <p>
+            أناقة كلاسيكية بلمسة فاخرة
+          </p>
+
+          <div class="price">
+            329 ₪
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+
+      <div class="product">
+
+        <div class="product-photo photo-beige">
+
+          <div class="silhouette beige-suit"></div>
+
+        </div>
+
+        <div class="product-info">
+
+          <h3>
+            Elegant Line
+          </h3>
+
+          <p>
+            تصميم ناعم للمناسبات
+          </p>
+
+          <div class="price">
+            349 ₪
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <small>
+      ABOUT JUMANA
+    </small>
+
+    <h2>
+      تفاصيل صغيرة.
+      <br>
+      حضور كبير.
+    </h2>
+
+    <div class="line"></div>
+
+    <p>
+      JUMANA هي علامة تهتم بتقديم البدلات النسائية
+      بأسلوب أنيق وعصري، مع التركيز على التصميم
+      والتفاصيل التي تمنح كل إطلالة حضورًا خاصًا.
+    </p>
+
+  </section>
+
+
+  <!-- INSTAGRAM -->
+
+  <section class="instagram" id="contact">
+
+    <h2>
+      JUMANA
+    </h2>
+
+    <p>
+      تابعي أحدث المجموعات والإطلالات
+    </p>
+
+    <a class="instagram-btn" href="#">
+      Instagram
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <strong>
+      JUMANA
+    </strong>
+
+    <span>
+      Elegance in Every Detail © 2026
+    </span>
+
+  </footer>
+
+
+</body>
+</html>
